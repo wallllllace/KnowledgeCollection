@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF536E5C28BE0C550001A564 /* MyQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E5A28BE0C550001A564 /* MyQueue.cpp */; };
+		EF536E5F28BE15D70001A564 /* MyCircularQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E5D28BE15D70001A564 /* MyCircularQueue.cpp */; };
+		EF536E6228BF53510001A564 /* MyStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E6028BF53510001A564 /* MyStack.cpp */; };
+		EF536E6528C09B9E0001A564 /* MyLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E6328C09B9E0001A564 /* MyLinkedList.cpp */; };
+		EF536E6828C2FC6E0001A564 /* MyDoubleLinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E6628C2FC6E0001A564 /* MyDoubleLinkedList.cpp */; };
+		EF536E6B28C3A5C30001A564 /* MyHashSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E6928C3A5C30001A564 /* MyHashSet.cpp */; };
+		EF536E6E28C43DED0001A564 /* MyHashMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF536E6C28C43DED0001A564 /* MyHashMap.cpp */; };
+		EFD2987E28B9EE4B00A86353 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFD2987D28B9EE4B00A86353 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EFD2987828B9EE4B00A86353 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF536E5A28BE0C550001A564 /* MyQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyQueue.cpp; sourceTree = "<group>"; };
+		EF536E5B28BE0C550001A564 /* MyQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyQueue.hpp; sourceTree = "<group>"; };
+		EF536E5D28BE15D70001A564 /* MyCircularQueue.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyCircularQueue.cpp; sourceTree = "<group>"; };
+		EF536E5E28BE15D70001A564 /* MyCircularQueue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyCircularQueue.hpp; sourceTree = "<group>"; };
+		EF536E6028BF53510001A564 /* MyStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyStack.cpp; sourceTree = "<group>"; };
+		EF536E6128BF53510001A564 /* MyStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyStack.hpp; sourceTree = "<group>"; };
+		EF536E6328C09B9E0001A564 /* MyLinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyLinkedList.cpp; sourceTree = "<group>"; };
+		EF536E6428C09B9E0001A564 /* MyLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyLinkedList.hpp; sourceTree = "<group>"; };
+		EF536E6628C2FC6E0001A564 /* MyDoubleLinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyDoubleLinkedList.cpp; sourceTree = "<group>"; };
+		EF536E6728C2FC6E0001A564 /* MyDoubleLinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyDoubleLinkedList.hpp; sourceTree = "<group>"; };
+		EF536E6928C3A5C30001A564 /* MyHashSet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyHashSet.cpp; sourceTree = "<group>"; };
+		EF536E6A28C3A5C30001A564 /* MyHashSet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyHashSet.hpp; sourceTree = "<group>"; };
+		EF536E6C28C43DED0001A564 /* MyHashMap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MyHashMap.cpp; sourceTree = "<group>"; };
+		EF536E6D28C43DED0001A564 /* MyHashMap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MyHashMap.hpp; sourceTree = "<group>"; };
+		EFD2987A28B9EE4B00A86353 /* LeetCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFD2987D28B9EE4B00A86353 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFD2987728B9EE4B00A86353 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EFD2987128B9EE4B00A86353 = {
+			isa = PBXGroup;
+			children = (
+				EFD2987C28B9EE4B00A86353 /* LeetCode */,
+				EFD2987B28B9EE4B00A86353 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EFD2987B28B9EE4B00A86353 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFD2987A28B9EE4B00A86353 /* LeetCode */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFD2987C28B9EE4B00A86353 /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				EFD2987D28B9EE4B00A86353 /* main.cpp */,
+				EF536E5A28BE0C550001A564 /* MyQueue.cpp */,
+				EF536E5B28BE0C550001A564 /* MyQueue.hpp */,
+				EF536E5D28BE15D70001A564 /* MyCircularQueue.cpp */,
+				EF536E5E28BE15D70001A564 /* MyCircularQueue.hpp */,
+				EF536E6028BF53510001A564 /* MyStack.cpp */,
+				EF536E6128BF53510001A564 /* MyStack.hpp */,
+				EF536E6328C09B9E0001A564 /* MyLinkedList.cpp */,
+				EF536E6428C09B9E0001A564 /* MyLinkedList.hpp */,
+				EF536E6628C2FC6E0001A564 /* MyDoubleLinkedList.cpp */,
+				EF536E6728C2FC6E0001A564 /* MyDoubleLinkedList.hpp */,
+				EF536E6928C3A5C30001A564 /* MyHashSet.cpp */,
+				EF536E6A28C3A5C30001A564 /* MyHashSet.hpp */,
+				EF536E6C28C43DED0001A564 /* MyHashMap.cpp */,
+				EF536E6D28C43DED0001A564 /* MyHashMap.hpp */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFD2987928B9EE4B00A86353 /* LeetCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFD2988128B9EE4B00A86353 /* Build configuration list for PBXNativeTarget "LeetCode" */;
+			buildPhases = (
+				EFD2987628B9EE4B00A86353 /* Sources */,
+				EFD2987728B9EE4B00A86353 /* Frameworks */,
+				EFD2987828B9EE4B00A86353 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LeetCode;
+			productName = LeetCode;
+			productReference = EFD2987A28B9EE4B00A86353 /* LeetCode */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFD2987228B9EE4B00A86353 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EFD2987928B9EE4B00A86353 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EFD2987528B9EE4B00A86353 /* Build configuration list for PBXProject "LeetCode" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFD2987128B9EE4B00A86353;
+			productRefGroup = EFD2987B28B9EE4B00A86353 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFD2987928B9EE4B00A86353 /* LeetCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFD2987628B9EE4B00A86353 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF536E6228BF53510001A564 /* MyStack.cpp in Sources */,
+				EFD2987E28B9EE4B00A86353 /* main.cpp in Sources */,
+				EF536E6B28C3A5C30001A564 /* MyHashSet.cpp in Sources */,
+				EF536E5C28BE0C550001A564 /* MyQueue.cpp in Sources */,
+				EF536E6828C2FC6E0001A564 /* MyDoubleLinkedList.cpp in Sources */,
+				EF536E6528C09B9E0001A564 /* MyLinkedList.cpp in Sources */,
+				EF536E6E28C43DED0001A564 /* MyHashMap.cpp in Sources */,
+				EF536E5F28BE15D70001A564 /* MyCircularQueue.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EFD2987F28B9EE4B00A86353 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EFD2988028B9EE4B00A86353 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EFD2988228B9EE4B00A86353 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7R73AFLCA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EFD2988328B9EE4B00A86353 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7R73AFLCA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFD2987528B9EE4B00A86353 /* Build configuration list for PBXProject "LeetCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD2987F28B9EE4B00A86353 /* Debug */,
+				EFD2988028B9EE4B00A86353 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFD2988128B9EE4B00A86353 /* Build configuration list for PBXNativeTarget "LeetCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFD2988228B9EE4B00A86353 /* Debug */,
+				EFD2988328B9EE4B00A86353 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFD2987228B9EE4B00A86353 /* Project object */;
+}

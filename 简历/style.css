@@ -1,0 +1,61 @@
+
+h3, h4, h5, p, ul {
+    line-height: 18px;
+} 
+
+.level1-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.level2-title {
+    font-size: 13px;
+    font-weight: bold;
+    margin: 6px 0;
+}
+.level3-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.head {
+    margin:0 0 15px 0;
+}
+.body {
+    margin:15px 0 0 0;
+}
+
+.info, .job, .edu {
+    margin: 10px 0 0 0;
+}
+.content {
+    font-size: 12px;
+    margin: 1px 0;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container {
+    margin:0 0 0 15px;
+}
+
+.container-item {
+    margin:0 0 0 25px;
+}
+
+.hr-solid {
+    border: 0;
+    border-top: 0.5px solid #e9e9eb;
+    margin: 2px 0 2px 0;
+}
+
+.name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
