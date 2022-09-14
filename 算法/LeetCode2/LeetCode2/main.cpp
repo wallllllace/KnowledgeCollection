@@ -57,6 +57,86 @@ public:
     }
 };
 
+// 希尔排序 (时间复杂度：O(nlog2n), 空间复杂度O(1), 稳定性：非稳定)
+class Solution_4 {
+public:
+    void shell_sort(std::vector<int>& vec) {
+        int length = static_cast<int>(vec.size());
+        int h = 1;
+        while (h < length / 3) {
+            h = 3 * h + 1;
+        }
+        while (h >= 1) {
+            for (int i = h; i < length; i++) {
+                for (int j = i; j >= h && vec[j] < vec[j - h]; j -= h) {
+                    std::swap(vec[j], vec[j - h]);
+                }
+            }
+            h = h / 3;
+        }
+    }
+};
+
+// 归并排序 (时间复杂度：O(nlog2n), 空间复杂度O(1), 稳定性：非稳定)
+class Solution_5 {
+public:
+    void mergeSort(std::vector<int>& vec) {
+//        int len = static_cast<int>(vec.size());
+        std::vector<int> res;
+        precess_mergeSort(vec, res, 0, vec.size()-1);
+    }
+    
+    void precess_mergeSort(std::vector<int>& vec, std::vector<int>& res, int start, int end) {
+        if (start >= end) {
+            return;
+        }
+        int len = end - start, mid = start + (len >> 1);
+        int start1 = start, end1 = mid;
+        int start2 = mid + 1, end2 = end;
+        precess_mergeSort(vec, res, start1, end1);
+        precess_mergeSort(vec, res, start2, end2);
+        int k = start;
+        while (start1 <= end1 && start2 <= end2) {
+            res[k++] = vec[start1] < vec[start2] ? vec[start1++] : vec[start2++];
+        }
+        while (start1 <= end1) {
+            res[k++] = vec[start1++];
+        }
+        while (start2 <= end2) {
+            res[k++] = vec[start2++];
+        }
+        for (k = start; k <= end; k++) {
+            vec[k] = res[k];
+        }
+        /*
+         auto mid = begin + (end-begin) / 2;
+         std::vector<int> lastVec = precess_mergeSort(vec, begin, mid);
+         std::vector<int> nextVec = precess_mergeSort(vec, mid+1, end);
+         std::vector<int> res;
+         int i = 0, j = 0;
+         while (i < lastVec.size() && j < nextVec.size()) {
+             if (lastVec[i] < nextVec[j]) {
+                 res.push_back(lastVec[i]);
+                 ++i;
+             } else {
+                 res.push_back(nextVec[j]);
+                 ++j;
+             }
+         }
+         while (i < lastVec.size()) {
+             res.push_back(lastVec[i]);
+             ++i;
+         }
+         while (j < nextVec.size()) {
+             res.push_back(nextVec[j]);
+             ++j;
+         }
+         return res;
+         */
+    }
+};
+
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -75,10 +155,17 @@ int main(int argc, const char * argv[]) {
      delete s_2;
      */
     
-    Solution_3 *s_3 = new Solution_3();
+    /*
+     Solution_3 *s_3 = new Solution_3();
+     std::vector<int> vec = {6,7, 5, 4, 3, 2, 1};
+     s_3->insertionSort(vec);
+     delete s_3;
+     */
+    
+    Solution_5 *s_5 = new Solution_5();
     std::vector<int> vec = {6,7, 5, 4, 3, 2, 1};
-    s_3->insertionSort(vec);
-    delete s_3;
+    s_5->mergeSort(vec);
+    delete s_5;
     
     
     
