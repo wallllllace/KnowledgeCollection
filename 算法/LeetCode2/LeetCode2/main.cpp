@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <vector>
+#include "MaxHeap.hpp"
 
 // 冒泡排序 （时间复杂度：O(n2)，空间复杂度：O(1), 稳定性：稳定）
 class Solution_1 {
@@ -203,11 +204,23 @@ int main(int argc, const char * argv[]) {
      delete s_5;
      */
     
-    Solution_6 *s_6 = new Solution_6();
-    std::vector<int> vec = {6,7, 5, 4, 3, 2, 1};
-    s_6->quick_sort(vec);
-    delete s_6;
+    /*
+     Solution_6 *s_6 = new Solution_6();
+     std::vector<int> vec = {6,7, 5, 4, 3, 2, 1};
+     s_6->quick_sort(vec);
+     delete s_6;
+     */
     
+    MaxHeap *max_h = new MaxHeap();
+    max_h->add(5);
+    max_h->add(9);
+    max_h->add(4);
+    max_h->add(2);
+    max_h->add(3);
+    max_h->add(7);
+    max_h->add(6);
+    
+    std::vector<int> vec = max_h->elements();
     
     
     for (auto i : vec) {
@@ -215,6 +228,20 @@ int main(int argc, const char * argv[]) {
     }
     std::cout << std::endl;
     
+    max_h->remove();
+    max_h->remove();
+    max_h->remove();
+    max_h->remove();
+    max_h->remove();
+    max_h->remove();
+    max_h->remove();
+    vec = max_h->elements();
+    for (auto i : vec) {
+        std::cout << i << ", ";
+    }
+    std::cout << std::endl;
+    
+    delete max_h;
     
     
     
