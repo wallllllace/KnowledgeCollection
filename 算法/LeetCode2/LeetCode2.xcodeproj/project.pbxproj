@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		832EC78C28D0C0D100AEF2DD /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 832EC78B28D0C0D100AEF2DD /* main.cpp */; };
+		EF0B44A928D335A500BD8003 /* MaxHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF0B44A728D335A500BD8003 /* MaxHeap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		832EC78828D0C0D100AEF2DD /* LeetCode2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LeetCode2; sourceTree = BUILT_PRODUCTS_DIR; };
 		832EC78B28D0C0D100AEF2DD /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF0B44A728D335A500BD8003 /* MaxHeap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MaxHeap.cpp; sourceTree = "<group>"; };
+		EF0B44A828D335A500BD8003 /* MaxHeap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MaxHeap.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				832EC78B28D0C0D100AEF2DD /* main.cpp */,
+				EF0B44A728D335A500BD8003 /* MaxHeap.cpp */,
+				EF0B44A828D335A500BD8003 /* MaxHeap.hpp */,
 			);
 			path = LeetCode2;
 			sourceTree = "<group>";
@@ -118,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF0B44A928D335A500BD8003 /* MaxHeap.cpp in Sources */,
 				832EC78C28D0C0D100AEF2DD /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

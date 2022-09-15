@@ -77,7 +77,7 @@ public:
     }
 };
 
-// 归并排序 (时间复杂度：O(nlog2n), 空间复杂度O(1), 稳定性：非稳定)
+// 归并排序 (时间复杂度：O(nlogn), 空间复杂度O(1), 稳定性：非稳定)
 class Solution_5 {
 public:
     void mergeSort(std::vector<int>& vec) {
@@ -136,6 +136,40 @@ public:
     }
 };
 
+// 快速排序（时间复杂度：O(nlogn), 空间复杂度：O(logn), 稳定性：非稳定）
+class Solution_6 {
+public:
+    void quick_sort(std::vector<int> &vec){
+        precess_quick_sort(vec, 0, static_cast<int>(vec.size())-1);
+    }
+    
+    void precess_quick_sort(std::vector<int> &vec, int low, int high){
+        if (low >= high) {
+            return;
+        }
+        int pos = precess_sort(vec, low, high);
+        precess_quick_sort(vec, low, pos);
+        precess_quick_sort(vec, pos+1, high);
+    }
+    
+    int precess_sort(std::vector<int> &vec, int low, int high){
+        int l = low, h = high;
+        int pos = vec[l];
+        while (l < h) {
+            while (l < h && pos <= vec[h]) {
+                --h;
+            }
+            vec[l] = vec[h];
+            while (l < h && pos >= vec[l]) {
+                ++l;
+            }
+            vec[h] = vec[l];
+        }
+        vec[l] = pos;
+        return l;
+    }
+    
+};
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -162,10 +196,17 @@ int main(int argc, const char * argv[]) {
      delete s_3;
      */
     
-    Solution_5 *s_5 = new Solution_5();
+    /*
+     Solution_5 *s_5 = new Solution_5();
+     std::vector<int> vec = {6,7, 5, 4, 3, 2, 1};
+     s_5->mergeSort(vec);
+     delete s_5;
+     */
+    
+    Solution_6 *s_6 = new Solution_6();
     std::vector<int> vec = {6,7, 5, 4, 3, 2, 1};
-    s_5->mergeSort(vec);
-    delete s_5;
+    s_6->quick_sort(vec);
+    delete s_6;
     
     
     
