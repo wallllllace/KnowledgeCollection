@@ -238,6 +238,85 @@ public:
     }
 };
 
+
+/// 最长自增子序列
+class Solution_9 {
+public:
+    /*
+     
+    // 时间复杂度：O(n ^ 2)
+    // 空间复杂度：O(n)
+    // 动态规划，利用状态转移方程f(n) = max(f(i) + 1) (i < n && nums[i] < nums[n])
+      
+     public int lengthOfLIS(std::vector<int>& nums) {
+         int n = nums.size();
+        std::vector<int> dp(n, 1);
+         int result = 1;
+         for (int i = 1; i < n; i++) {
+             for (int j = 0; j < i; j++) {
+                 if (nums[j] < nums[i]) {
+                     dp[i] = std::max(dp[j] + 1, dp[i]);
+                 }
+             }
+             result = std::max(dp[i], result);
+         }
+         return result;
+     }
+     */
+    int lengthOfLIS(std::vector<int>& nums) {
+        int len = static_cast<int>(nums.size());
+        int max_len = 1;
+        std::vector<int> dp(len, 1);
+        for (int i = 1; i < len; ++i) {
+            for (int j = 0; j < i; ++j) {
+                if (nums[j] < nums[i]) {
+                    dp[i] = std::max(dp[j] + 1, dp[i]);
+                }
+            }
+            max_len = std::max(dp[i], max_len);
+        }
+        return max_len;
+        
+        /*
+         int len = static_cast<int>(nums.size());
+         // std::pair<int, int> fist: 最大子序列长度， second：子序列中最大值
+         int max_len = 0;
+         std::vector<std::vector<std::pair<int, int>>> dp(len, std::vector<std::pair<int, int>>(len, {0, INTMAX_MIN}));
+         for (int i = 0; i < len; ++i) {
+             dp[i][i] = {1, nums[i]};
+             max_len = 1;
+         }
+         for (int i = 0; i < len; ++i) {
+             for (int j = i + 1; j < len; ++j) {
+                 auto last = dp[i][j-1];
+                 if (nums[j] > last.second) {
+                     dp[i][j] = {++last.first, nums[j]};
+                 } else {
+                     dp[i][j] = last;
+                 }
+                 max_len = std::max(max_len, dp[i][j].first);
+             }
+         }
+         return max_len;
+         */
+        
+        /*
+         int max_len = 0;
+         int left = 0, right = 0;
+         while (right < nums.size()-1) {
+             int index = right;
+             ++right;
+             if (nums[index+1] <= nums[index]) {
+                 left = right;
+             }
+             max_len = std::max(max_len, right - left + 1);
+         }
+         return max_len;
+         */
+        
+    }
+};
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -352,13 +431,23 @@ int main(int argc, const char * argv[]) {
      delete s_7;
      */
     
-    std::vector<int> vec = {1, 1, 2, 3, 3, 1, 4, 2};
-    Solution_8 *s_8 = new Solution_8();
-    std::vector<int> res = s_8->topKFrequent(vec, 3);
-    for (auto i : res) {
-        std::cout << i << ", ";
-    }
-    std::cout << std::endl;
+    /*
+     std::vector<int> vec = {1, 1, 2, 3, 3, 1, 4, 2};
+     Solution_8 *s_8 = new Solution_8();
+     std::vector<int> res = s_8->topKFrequent(vec, 3);
+     for (auto i : res) {
+         std::cout << i << ", ";
+     }
+     std::cout << std::endl;
+     */
+    
+    Solution_9 *s_9 = new Solution_9();
+//    std::vector<int> vec = {11, 2, 3, 4, 6, 7, 10};
+//    std::vector<int> vec = {10,9,2,5,3,7,101,18};
+    std::vector<int> vec = {0, 1, 0, 3, 2, 3};
+    int res = s_9->lengthOfLIS(vec);
+    std::cout << "最长递增序列: " << res << std::endl;
+    delete s_9;
     
     return 0;
 }
