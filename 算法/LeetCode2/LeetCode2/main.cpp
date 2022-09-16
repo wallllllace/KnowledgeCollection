@@ -8,6 +8,8 @@
 #include <iostream>
 #include <vector>
 #include "MaxHeap.hpp"
+#include <algorithm>
+#include <unordered_map>
 
 // 冒泡排序 （时间复杂度：O(n2)，空间复杂度：O(1), 稳定性：稳定）
 class Solution_1 {
@@ -172,6 +174,70 @@ public:
     
 };
 
+/// 最小的k个数
+class Solution_7 {
+public:
+    std::vector<int> getLeastNumbers(std::vector<int>& arr, int k) {
+        /*
+         MaxHeap *max_heep = new MaxHeap(arr);
+         std::vector<int> vec;
+         for (int i = 0; i < k; ++i) {
+             vec.push_back(max_heep->peek());
+             max_heep->remove();
+         }
+         return vec;
+         */
+        
+        // 系统提供
+        std::make_heap(arr.begin(), arr.end(), std::greater<int>()); // 小顶堆
+//        std::make_heap(arr.begin(), arr.end(), std::less<int>()) // 大顶堆
+        std::vector<int> vec;
+        for (int i = 0; i < k; ++i) {
+            std::pop_heap(arr.begin(), arr.end(), std::greater<int>());
+            vec.push_back(arr.back());
+            arr.pop_back();
+        }
+        return vec;
+    }
+};
+
+
+/// 访问频率前k高的元素
+class Solution_8 {
+public:
+    std::vector<int> topKFrequent(std::vector<int>& nums, int k) {
+        if (k >= nums.size()) {
+            return nums;
+        }
+        std::unordered_map<int, int> count_map;
+        for (int i = 0; i < nums.size(); ++i) {
+            int value = nums[i];
+            auto it = count_map.find(value);
+            if (it == count_map.cend()) {
+                count_map.insert({value, 1});
+            } else {
+                ++(it->second);
+            }
+        }
+        std::vector<std::pair<int, int>> vec;
+        for (auto i : count_map) {
+            vec.push_back(i);
+        }
+        auto cmp = [](std::pair<int, int> item1, std::pair<int, int> item2) {
+            return item1.second < item2.second;
+        };
+        std::make_heap(vec.begin(), vec.end(), cmp);
+        std::vector<int> res;
+        for (int i = 0; i < k; ++i) {
+            std::pop_heap(vec.begin(), vec.end(), cmp);
+            auto back = vec.back();
+            res.push_back(back.first);
+            vec.pop_back();
+        }
+        return res;
+    }
+};
+
 int main(int argc, const char * argv[]) {
     // insert code here...
     std::cout << "Hello, World!\n";
@@ -211,39 +277,88 @@ int main(int argc, const char * argv[]) {
      delete s_6;
      */
     
-    MaxHeap *max_h = new MaxHeap();
-    max_h->add(5);
-    max_h->add(9);
-    max_h->add(4);
-    max_h->add(2);
-    max_h->add(3);
-    max_h->add(7);
-    max_h->add(6);
     
-    std::vector<int> vec = max_h->elements();
+    /*
+     MaxHeap *max_h = new MaxHeap();
+     max_h->add(5);
+     max_h->add(9);
+     max_h->add(4);
+     max_h->add(2);
+     max_h->add(3);
+     max_h->add(7);
+     max_h->add(6);
+     
+     std::vector<int> vec = max_h->elements();
+     
+     
+     for (auto i : vec) {
+         std::cout << i << ", ";
+     }
+     std::cout << std::endl;
+     
+     max_h->remove();
+     max_h->remove();
+     max_h->remove();
+     max_h->remove();
+     max_h->remove();
+     max_h->remove();
+     max_h->remove();
+     vec = max_h->elements();
+     */
+//
+//    std::vector<int> vec = {11, 17, 15, 16, 14, 12, 13};
+//    MaxHeap *max_h = new MaxHeap(vec);
+//
+//    for (auto i : vec) {
+//        std::cout << i << ", ";
+//    }
+//    std::cout << std::endl;
+    
+    /*
+     max_h->add(10);
+     vec = max_h->elements();
+     for (auto i : vec) {
+         std::cout << i << ", ";
+     }
+     std::cout << std::endl;
+     
+     max_h->add(8);
+     vec = max_h->elements();
+     for (auto i : vec) {
+         std::cout << i << ", ";
+     }
+     std::cout << std::endl;
+     */
+    
+//    max_h->remove();
+//    max_h->remove();
+//    max_h->remove();
+//    int ans = max_h->peek();
+//
+//    std::cout << "目标元素是：" << ans << std::endl;
+//
+//    delete max_h;
     
     
-    for (auto i : vec) {
+    
+    /*
+     std::vector<int> vec = {11, 17, 15, 16, 14, 12, 13};
+     Solution_7 *s_7 = new Solution_7();
+     std::vector<int> res = s_7->getLeastNumbers(vec, 3);
+     for (auto i : res) {
+         std::cout << i << ", ";
+     }
+     std::cout << std::endl;
+     delete s_7;
+     */
+    
+    std::vector<int> vec = {1, 1, 2, 3, 3, 1, 4, 2};
+    Solution_8 *s_8 = new Solution_8();
+    std::vector<int> res = s_8->topKFrequent(vec, 3);
+    for (auto i : res) {
         std::cout << i << ", ";
     }
     std::cout << std::endl;
-    
-    max_h->remove();
-    max_h->remove();
-    max_h->remove();
-    max_h->remove();
-    max_h->remove();
-    max_h->remove();
-    max_h->remove();
-    vec = max_h->elements();
-    for (auto i : vec) {
-        std::cout << i << ", ";
-    }
-    std::cout << std::endl;
-    
-    delete max_h;
-    
-    
     
     return 0;
 }

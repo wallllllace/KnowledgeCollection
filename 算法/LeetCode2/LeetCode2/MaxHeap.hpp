@@ -10,7 +10,7 @@
 
 #include <stdio.h>
 #include <vector>
-//#include <heap>
+#include <iostream>
 
 class MaxHeap {
     std::vector<int> vec;
@@ -19,6 +19,39 @@ public:
     MaxHeap(){
         vec.push_back(0);
 //        std::make_heap(vec.begin(), vec.end());
+    }
+    
+    // 堆化
+    MaxHeap(std::vector<int>& vec){
+        vec.insert(vec.cbegin(), 0);
+        int pos = static_cast<int>(vec.size()) - 1;
+        while (pos > 0) {
+            int index = pos;
+            int parent = index / 2;
+            while (parent > 0 && vec[parent] > vec[index]) {
+                std::swap(vec[parent], vec[index]);
+//                std::cout << "交换" << std::endl;
+                index = parent;
+                parent = index / 2;
+            }
+            int left = index * 2, right = left + 1;
+            int sub_min_index = left;
+            if (right < vec.size() && vec[right] < vec[left]) {
+                sub_min_index = right;
+            }
+            while (sub_min_index < vec.size() && vec[sub_min_index] < vec[index]) {
+                std::swap(vec[sub_min_index], vec[index]);
+//                std::cout << "交换" << std::endl;
+                index = sub_min_index;
+                left = 2 * index; right = left + 1;
+                sub_min_index = left;
+                if (right < vec.size() && vec[right] < vec[left]) {
+                    sub_min_index = right;
+                }
+            }
+            --pos;
+        }
+        this->vec = vec;
     }
     
     void add(int element) {
