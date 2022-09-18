@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF7DA45028D6F2B00057AF74 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA44F28D6F2B00057AF74 /* main.cpp */; };
+		EF7DA45828D6F4190057AF74 /* Glyph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA45628D6F4190057AF74 /* Glyph.cpp */; };
+		EF7DA45B28D7016E0057AF74 /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA45928D7016E0057AF74 /* Window.cpp */; };
+		EF7DA45E28D703610057AF74 /* Character.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA45C28D703610057AF74 /* Character.cpp */; };
+		EF7DA46428D709E50057AF74 /* Rectangle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA46228D709E50057AF74 /* Rectangle.cpp */; };
+		EF7DA46728D70B840057AF74 /* Row.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA46528D70B840057AF74 /* Row.cpp */; };
+		EF7DA46A28D7128D0057AF74 /* Compositor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA46828D7128D0057AF74 /* Compositor.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF7DA44A28D6F2B00057AF74 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF7DA44C28D6F2B00057AF74 /* Lexi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexi; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7DA44F28D6F2B00057AF74 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF7DA45628D6F4190057AF74 /* Glyph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Glyph.cpp; sourceTree = "<group>"; };
+		EF7DA45728D6F4190057AF74 /* Glyph.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Glyph.hpp; sourceTree = "<group>"; };
+		EF7DA45928D7016E0057AF74 /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
+		EF7DA45A28D7016E0057AF74 /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		EF7DA45C28D703610057AF74 /* Character.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Character.cpp; sourceTree = "<group>"; };
+		EF7DA45D28D703610057AF74 /* Character.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Character.hpp; sourceTree = "<group>"; };
+		EF7DA46028D703CD0057AF74 /* PrefixHeader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PrefixHeader.hpp; sourceTree = "<group>"; };
+		EF7DA46228D709E50057AF74 /* Rectangle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rectangle.cpp; sourceTree = "<group>"; };
+		EF7DA46328D709E50057AF74 /* Rectangle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Rectangle.hpp; sourceTree = "<group>"; };
+		EF7DA46528D70B840057AF74 /* Row.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Row.cpp; sourceTree = "<group>"; };
+		EF7DA46628D70B840057AF74 /* Row.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Row.hpp; sourceTree = "<group>"; };
+		EF7DA46828D7128D0057AF74 /* Compositor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Compositor.cpp; sourceTree = "<group>"; };
+		EF7DA46928D7128D0057AF74 /* Compositor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Compositor.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7DA44928D6F2B00057AF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF7DA44328D6F2B00057AF74 = {
+			isa = PBXGroup;
+			children = (
+				EF7DA44E28D6F2B00057AF74 /* Lexi */,
+				EF7DA44D28D6F2B00057AF74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7DA44D28D6F2B00057AF74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7DA44C28D6F2B00057AF74 /* Lexi */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7DA44E28D6F2B00057AF74 /* Lexi */ = {
+			isa = PBXGroup;
+			children = (
+				EF7DA44F28D6F2B00057AF74 /* main.cpp */,
+				EF7DA45628D6F4190057AF74 /* Glyph.cpp */,
+				EF7DA45728D6F4190057AF74 /* Glyph.hpp */,
+				EF7DA45C28D703610057AF74 /* Character.cpp */,
+				EF7DA45D28D703610057AF74 /* Character.hpp */,
+				EF7DA46228D709E50057AF74 /* Rectangle.cpp */,
+				EF7DA46328D709E50057AF74 /* Rectangle.hpp */,
+				EF7DA46528D70B840057AF74 /* Row.cpp */,
+				EF7DA46628D70B840057AF74 /* Row.hpp */,
+				EF7DA45928D7016E0057AF74 /* Window.cpp */,
+				EF7DA45A28D7016E0057AF74 /* Window.hpp */,
+				EF7DA46028D703CD0057AF74 /* PrefixHeader.hpp */,
+				EF7DA46828D7128D0057AF74 /* Compositor.cpp */,
+				EF7DA46928D7128D0057AF74 /* Compositor.hpp */,
+			);
+			path = Lexi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7DA44B28D6F2B00057AF74 /* Lexi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7DA45328D6F2B00057AF74 /* Build configuration list for PBXNativeTarget "Lexi" */;
+			buildPhases = (
+				EF7DA44828D6F2B00057AF74 /* Sources */,
+				EF7DA44928D6F2B00057AF74 /* Frameworks */,
+				EF7DA44A28D6F2B00057AF74 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lexi;
+			productName = Lexi;
+			productReference = EF7DA44C28D6F2B00057AF74 /* Lexi */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7DA44428D6F2B00057AF74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EF7DA44B28D6F2B00057AF74 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EF7DA44728D6F2B00057AF74 /* Build configuration list for PBXProject "Lexi" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7DA44328D6F2B00057AF74;
+			productRefGroup = EF7DA44D28D6F2B00057AF74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7DA44B28D6F2B00057AF74 /* Lexi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7DA44828D6F2B00057AF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7DA46728D70B840057AF74 /* Row.cpp in Sources */,
+				EF7DA45828D6F4190057AF74 /* Glyph.cpp in Sources */,
+				EF7DA45B28D7016E0057AF74 /* Window.cpp in Sources */,
+				EF7DA46A28D7128D0057AF74 /* Compositor.cpp in Sources */,
+				EF7DA45028D6F2B00057AF74 /* main.cpp in Sources */,
+				EF7DA46428D709E50057AF74 /* Rectangle.cpp in Sources */,
+				EF7DA45E28D703610057AF74 /* Character.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF7DA45128D6F2B00057AF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF7DA45228D6F2B00057AF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF7DA45428D6F2B00057AF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7R73AFLCA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF7DA45528D6F2B00057AF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7R73AFLCA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7DA44728D6F2B00057AF74 /* Build configuration list for PBXProject "Lexi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7DA45128D6F2B00057AF74 /* Debug */,
+				EF7DA45228D6F2B00057AF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7DA45328D6F2B00057AF74 /* Build configuration list for PBXNativeTarget "Lexi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7DA45428D6F2B00057AF74 /* Debug */,
+				EF7DA45528D6F2B00057AF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7DA44428D6F2B00057AF74 /* Project object */;
+}

@@ -1,0 +1,332 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF7DA48B28D717810057AF74 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA48A28D717810057AF74 /* main.cpp */; };
+		EF7DA49328D717C20057AF74 /* FruitFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA49128D717C20057AF74 /* FruitFactory.cpp */; };
+		EF7DA49628D717E70057AF74 /* Fruit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA49428D717E70057AF74 /* Fruit.cpp */; };
+		EF7DA49928D718360057AF74 /* AppleFruit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA49728D718360057AF74 /* AppleFruit.cpp */; };
+		EF7DA49C28D718920057AF74 /* OrangeFruit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA49A28D718920057AF74 /* OrangeFruit.cpp */; };
+		EF7DA49F28D719240057AF74 /* PearFruit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA49D28D719240057AF74 /* PearFruit.cpp */; };
+		EF7DA4A228D7221F0057AF74 /* AppleFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA4A028D7221F0057AF74 /* AppleFactory.cpp */; };
+		EF7DA4A528D7229C0057AF74 /* OrangeFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA4A328D7229C0057AF74 /* OrangeFactory.cpp */; };
+		EF7DA4A828D722FF0057AF74 /* PearFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF7DA4A628D722FF0057AF74 /* PearFactory.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EF7DA48528D717810057AF74 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EF7DA48728D717810057AF74 /* Factory */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Factory; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF7DA48A28D717810057AF74 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF7DA49128D717C20057AF74 /* FruitFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FruitFactory.cpp; sourceTree = "<group>"; };
+		EF7DA49228D717C20057AF74 /* FruitFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FruitFactory.hpp; sourceTree = "<group>"; };
+		EF7DA49428D717E70057AF74 /* Fruit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fruit.cpp; sourceTree = "<group>"; };
+		EF7DA49528D717E70057AF74 /* Fruit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Fruit.hpp; sourceTree = "<group>"; };
+		EF7DA49728D718360057AF74 /* AppleFruit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppleFruit.cpp; sourceTree = "<group>"; };
+		EF7DA49828D718360057AF74 /* AppleFruit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppleFruit.hpp; sourceTree = "<group>"; };
+		EF7DA49A28D718920057AF74 /* OrangeFruit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrangeFruit.cpp; sourceTree = "<group>"; };
+		EF7DA49B28D718920057AF74 /* OrangeFruit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OrangeFruit.hpp; sourceTree = "<group>"; };
+		EF7DA49D28D719240057AF74 /* PearFruit.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PearFruit.cpp; sourceTree = "<group>"; };
+		EF7DA49E28D719240057AF74 /* PearFruit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PearFruit.hpp; sourceTree = "<group>"; };
+		EF7DA4A028D7221F0057AF74 /* AppleFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppleFactory.cpp; sourceTree = "<group>"; };
+		EF7DA4A128D7221F0057AF74 /* AppleFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppleFactory.hpp; sourceTree = "<group>"; };
+		EF7DA4A328D7229C0057AF74 /* OrangeFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OrangeFactory.cpp; sourceTree = "<group>"; };
+		EF7DA4A428D7229C0057AF74 /* OrangeFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OrangeFactory.hpp; sourceTree = "<group>"; };
+		EF7DA4A628D722FF0057AF74 /* PearFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PearFactory.cpp; sourceTree = "<group>"; };
+		EF7DA4A728D722FF0057AF74 /* PearFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PearFactory.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF7DA48428D717810057AF74 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF7DA47E28D717810057AF74 = {
+			isa = PBXGroup;
+			children = (
+				EF7DA48928D717810057AF74 /* Factory */,
+				EF7DA48828D717810057AF74 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF7DA48828D717810057AF74 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF7DA48728D717810057AF74 /* Factory */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF7DA48928D717810057AF74 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				EF7DA48A28D717810057AF74 /* main.cpp */,
+				EF7DA49428D717E70057AF74 /* Fruit.cpp */,
+				EF7DA49528D717E70057AF74 /* Fruit.hpp */,
+				EF7DA49728D718360057AF74 /* AppleFruit.cpp */,
+				EF7DA49828D718360057AF74 /* AppleFruit.hpp */,
+				EF7DA4A028D7221F0057AF74 /* AppleFactory.cpp */,
+				EF7DA4A128D7221F0057AF74 /* AppleFactory.hpp */,
+				EF7DA49A28D718920057AF74 /* OrangeFruit.cpp */,
+				EF7DA49B28D718920057AF74 /* OrangeFruit.hpp */,
+				EF7DA4A328D7229C0057AF74 /* OrangeFactory.cpp */,
+				EF7DA4A428D7229C0057AF74 /* OrangeFactory.hpp */,
+				EF7DA49D28D719240057AF74 /* PearFruit.cpp */,
+				EF7DA49E28D719240057AF74 /* PearFruit.hpp */,
+				EF7DA4A628D722FF0057AF74 /* PearFactory.cpp */,
+				EF7DA4A728D722FF0057AF74 /* PearFactory.hpp */,
+				EF7DA49128D717C20057AF74 /* FruitFactory.cpp */,
+				EF7DA49228D717C20057AF74 /* FruitFactory.hpp */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF7DA48628D717810057AF74 /* Factory */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF7DA48E28D717810057AF74 /* Build configuration list for PBXNativeTarget "Factory" */;
+			buildPhases = (
+				EF7DA48328D717810057AF74 /* Sources */,
+				EF7DA48428D717810057AF74 /* Frameworks */,
+				EF7DA48528D717810057AF74 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Factory;
+			productName = Factory;
+			productReference = EF7DA48728D717810057AF74 /* Factory */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF7DA47F28D717810057AF74 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					EF7DA48628D717810057AF74 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = EF7DA48228D717810057AF74 /* Build configuration list for PBXProject "Factory" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF7DA47E28D717810057AF74;
+			productRefGroup = EF7DA48828D717810057AF74 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF7DA48628D717810057AF74 /* Factory */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF7DA48328D717810057AF74 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7DA49C28D718920057AF74 /* OrangeFruit.cpp in Sources */,
+				EF7DA49628D717E70057AF74 /* Fruit.cpp in Sources */,
+				EF7DA4A828D722FF0057AF74 /* PearFactory.cpp in Sources */,
+				EF7DA49F28D719240057AF74 /* PearFruit.cpp in Sources */,
+				EF7DA4A228D7221F0057AF74 /* AppleFactory.cpp in Sources */,
+				EF7DA48B28D717810057AF74 /* main.cpp in Sources */,
+				EF7DA49328D717C20057AF74 /* FruitFactory.cpp in Sources */,
+				EF7DA4A528D7229C0057AF74 /* OrangeFactory.cpp in Sources */,
+				EF7DA49928D718360057AF74 /* AppleFruit.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		EF7DA48C28D717810057AF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF7DA48D28D717810057AF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF7DA48F28D717810057AF74 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7R73AFLCA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF7DA49028D717810057AF74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q7R73AFLCA;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF7DA48228D717810057AF74 /* Build configuration list for PBXProject "Factory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7DA48C28D717810057AF74 /* Debug */,
+				EF7DA48D28D717810057AF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF7DA48E28D717810057AF74 /* Build configuration list for PBXNativeTarget "Factory" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF7DA48F28D717810057AF74 /* Debug */,
+				EF7DA49028D717810057AF74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF7DA47F28D717810057AF74 /* Project object */;
+}
