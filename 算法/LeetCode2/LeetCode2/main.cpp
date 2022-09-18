@@ -11,6 +11,8 @@
 #include <algorithm>
 #include <unordered_map>
 
+# pragma mark - 堆
+
 // 冒泡排序 （时间复杂度：O(n2)，空间复杂度：O(1), 稳定性：稳定）
 class Solution_1 {
 public:
@@ -238,44 +240,57 @@ public:
     }
 };
 
+# pragma mark - 动态规划
 
 /// 最长自增子序列
+/*
+ 输入：nums = [10,9,2,5,3,7,101,18]
+ 输出：4
+ 解释：最长递增子序列是 [2,3,7,101]，因此长度为 4 。
+ */
 class Solution_9 {
 public:
-    /*
-     
-    // 时间复杂度：O(n ^ 2)
-    // 空间复杂度：O(n)
-    // 动态规划，利用状态转移方程f(n) = max(f(i) + 1) (i < n && nums[i] < nums[n])
-      
-     public int lengthOfLIS(std::vector<int>& nums) {
-         int n = nums.size();
-        std::vector<int> dp(n, 1);
-         int result = 1;
-         for (int i = 1; i < n; i++) {
-             for (int j = 0; j < i; j++) {
-                 if (nums[j] < nums[i]) {
-                     dp[i] = std::max(dp[j] + 1, dp[i]);
-                 }
-             }
-             result = std::max(dp[i], result);
-         }
-         return result;
-     }
-     */
+    
     int lengthOfLIS(std::vector<int>& nums) {
         int len = static_cast<int>(nums.size());
+        std::vector<int> dp(len, 0);
         int max_len = 1;
-        std::vector<int> dp(len, 1);
-        for (int i = 1; i < len; ++i) {
+        for (int i = 0; i < len; ++i) {
+            dp[i] = 1;
             for (int j = 0; j < i; ++j) {
                 if (nums[j] < nums[i]) {
                     dp[i] = std::max(dp[j] + 1, dp[i]);
                 }
             }
-            max_len = std::max(dp[i], max_len);
+            max_len = std::max(max_len, dp[i]);
         }
         return max_len;
+        
+        /*
+         int len = static_cast<int>(nums.size());
+         std::vector<std::vector<int>> dp(len, std::vector<int>{});
+         dp[0] = {0};
+         int max_len = 1;
+         for (int i = 1; i < len; ++i) {
+             std::vector<int> sub_arr = dp[i-1];
+             int sub_arr_len = static_cast<int>(sub_arr.size());
+             int j = sub_arr_len - 1;
+             while (j >= 0 && nums[i] < nums[sub_arr[j]]) {
+                 --j;
+             }
+             if (j < 0) {
+                 dp[i] = {i};
+                 continue;
+             }
+             std::vector<int> res(sub_arr.begin(), sub_arr.begin() + j + 1);
+             res.push_back(i);
+             dp[i] = res;
+             max_len = std::max(max_len, static_cast<int>(dp[i].size()));
+         }
+         
+         return max_len;
+         */
+        
         
         /*
          int len = static_cast<int>(nums.size());
@@ -314,6 +329,53 @@ public:
          return max_len;
          */
         
+    }
+};
+
+/*
+ 最大和的连续子数组
+ 
+ 输入：nums = [-2,1,-3,4,-1,2,1,-5,4]
+ 输出：6
+ 解释：连续子数组 [4,-1,2,1] 的和最大，为 6 。
+ */
+class Solution_10 {
+public:
+    int maxSubArray(std::vector<int>& nums) {
+        int len = static_cast<int>(nums.size());
+        std::vector<int> dp(len, INTMAX_MIN); // 以n结尾的最大子数组的和
+        dp[0] = nums[0];
+        int max_sum = dp[0];
+        for (int i = 1; i < len; ++i) {
+            dp[i-1] > 0 ? dp[i] = dp[i-1] + nums[i] : dp[i] = nums[i];
+            max_sum = std::max(max_sum, dp[i]);
+        }
+        return max_sum;
+    }
+};
+
+/*
+ 打家劫舍
+ 
+ 输入：[2,7,9,3,1]
+ 输出：12
+ 解释：偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。
+      偷窃到的最高金额 = 2 + 9 + 1 = 12 。
+ */
+class Solution_11 {
+public:
+    int rob(std::vector<int>& nums) {
+        int len = static_cast<int>(nums.size());
+        std::vector<int> dp(len, INTMAX_MIN);
+        int max_res = INTMAX_MIN;
+        for (int i = 0; i < len; ++i) {
+            dp[i] = nums[i];
+            for (int j = 0; j < i - 1; ++j) {
+                dp[i] = std::max(dp[i], dp[j] + nums[i]);
+            }
+            max_res = std::max(max_res, dp[i]);
+        }
+        return max_res;
     }
 };
 
@@ -441,13 +503,34 @@ int main(int argc, const char * argv[]) {
      std::cout << std::endl;
      */
     
-    Solution_9 *s_9 = new Solution_9();
-//    std::vector<int> vec = {11, 2, 3, 4, 6, 7, 10};
-//    std::vector<int> vec = {10,9,2,5,3,7,101,18};
-    std::vector<int> vec = {0, 1, 0, 3, 2, 3};
-    int res = s_9->lengthOfLIS(vec);
-    std::cout << "最长递增序列: " << res << std::endl;
-    delete s_9;
+    /*
+     
+     
+     Solution_9 *s_9 = new Solution_9();
+//     std::vector<int> vec = {11, 2, 3, 4, 6, 7, 10};
+//     std::vector<int> vec = {10,9,2,5,3,7,101,18};
+//     std::vector<int> vec = {0, 1, 0, 3, 2, 3};
+    std::vector<int> vec = {7,7,7,7,7,7};
+     int res = s_9->lengthOfLIS(vec);
+     std::cout << "最长递增序列: " << res << std::endl;
+     delete s_9;
+     */
+    
+    /*
+    Solution_10 *s_10 = new Solution_10();
+    std::vector<int> vec = {-2,1,-3,4,-1,2,1,-5,4};
+    int res =  s_10->maxSubArray(vec);
+    std::cout << "最大连续子数组和：" << res << std::endl;
+    delete s_10;
+     */
+     
+    
+    Solution_11 *s_11 = new Solution_11();
+    std::vector<int> vec = {2,7,9,3,1};
+    int res = s_11->rob(vec);
+    std::cout << "最大金额：" << res <<std::endl;
+    delete s_11;
+
     
     return 0;
 }
