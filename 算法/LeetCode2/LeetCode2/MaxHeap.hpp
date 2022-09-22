@@ -18,7 +18,7 @@ class MaxHeap {
 public:
     MaxHeap(){
         vec.push_back(0);
-//        std::make_heap(vec.begin(), vec.end());
+        std::make_heap(vec.begin(), vec.end(), std::less<int>());
     }
     
     // 堆化
