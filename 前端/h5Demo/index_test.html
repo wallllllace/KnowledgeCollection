@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Javascript</title>
+    <script>
+        myName = 'Chris';
+
+        function logName() {
+        console.log(myName);
+        }
+
+        logName();
+
+        // var myName;
+
+
+        document.addEventListener('DOMContentLoaded', function(){
+
+            function addP() {
+                let element = document.createElement('p');
+                element.innerHTML = "点击了按钮";
+                document.body.appendChild(element);
+            }
+
+            let buttons = document.querySelectorAll('button');
+            for (let index = 0; index < buttons.length; index++) {
+                buttons[index].addEventListener('click',addP);
+            }
+        });
+    </script>
+</head>
+<body>
+    <button>点我！</button>
+</body>
+</html>

@@ -1,18 +1,13 @@
-var site = {"sites":[
-    {"name":"Runoob", "url":"www.runoob.com"}, 
-    {"name":"Google", "url":"www.google.com"},
-    {"name":"Taobao", "url":"www.taobao.com"}
-]};
+document.addEventListener('DOMContentLoaded', function() {
+    function createParagraph() {
+        let para = document.createElement('p');
+        para.textContent = '你点击了这个按钮！';
+        document.body.appendChild(para);
+    }
 
-var blobJson = new Blob([{"sites":[
-    {"name":"Runoob", "url":"www.runoob.com"}, 
-    {"name":"Google", "url":"www.google.com"},
-    {"name":"Taobao", "url":"www.taobao.com"}
-]}], {type : 'application/json'});
-var blobHtml = new Blob(['<a id="a"><b id="b">hey!</b></a>'], {type : 'text/html'});
+    const buttons = document.querySelectorAll('button');
+    for(let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', createParagraph);
+    }
 
-var reader = new FileReader;
-reader.readAsText(blobHtml, "utf-8");
-reader.onload = function(e) {
-    console.log('blob: ' + reader.result);
-};
+});
