@@ -17,22 +17,79 @@
         // var myName;
 
 
-        document.addEventListener('DOMContentLoaded', function(){
+        // document.addEventListener('DOMContentLoaded', function(){
 
-            function addP() {
-                let element = document.createElement('p');
-                element.innerHTML = "点击了按钮";
-                document.body.appendChild(element);
-            }
+        //     function addP() {
+        //         let element = document.createElement('p');
+        //         element.innerHTML = "点击了按钮";
+        //         document.body.appendChild(element);
+        //     }
 
-            let buttons = document.querySelectorAll('button');
-            for (let index = 0; index < buttons.length; index++) {
-                buttons[index].addEventListener('click',addP);
-            }
-        });
+        //     let buttons = document.querySelectorAll('button');
+        //     for (let index = 0; index < buttons.length; index++) {
+        //         buttons[index].addEventListener('click',addP);
+        //     }
+        // });
+
+        let arr = ['wallace','is','my','english','name'];
+        console.log(arr.join(' '));
+        console.log(arr.toString());
+
+
+        let str = 'dou wan yi shi da tou';
+        console.log(str.split(' '));
+
     </script>
 </head>
 <body>
     <button>点我！</button>
+    <button class="change">change color</button>
+    <script>
+        let body = document.querySelector('body');
+        let panel = document.createElement('div');
+        panel.setAttribute('class','messageBox');
+
+        body.appendChild(panel);
+
+        let p = document.createElement('p');
+        p.textContent = 'this is a message box';
+        panel.appendChild(p);
+
+        let btn = document.createElement('button');
+        btn.textContent = 'x';
+        panel.appendChild(btn);
+
+        btn.onclick = function(){
+            panel.parentNode.removeChild(panel);
+        }
+
+        let changeBtn = document.querySelector('.change');
+        function random(number) {
+            return Math.floor(Math.random()*(number+1));
+        }
+        changeBtn.onclick = function(){
+            const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            document.body.style.backgroundColor = rndCol;
+        }
+
+
+        var person = {
+            name: ['blob', 'mike'],
+            age: 32,
+            gender: 'male',
+            bio: function(){
+                alert(this.name[0]+ ' and ' + this.name[1] + ' is ' + this.gender + ';they are age is ' + this.age);
+            },
+            greeting: function(){
+                alert(`HI, I am ${this.name[0]}`);
+            }
+        };
+
+        person.bio();
+        person.greeting();
+
+
+
+    </script>
 </body>
 </html>
