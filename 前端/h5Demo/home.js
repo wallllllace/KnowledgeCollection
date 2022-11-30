@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
-    function createParagraph() {
-        let para = document.createElement('p');
-        para.textContent = '你点击了这个按钮！';
-        document.body.appendChild(para);
-    }
+// document.addEventListener('DOMContentLoaded', function() {
+//     function createParagraph() {
+//         let para = document.createElement('p');
+//         para.textContent = '你点击了这个按钮！';
+//         document.body.appendChild(para);
+//     }
 
-    const buttons = document.querySelectorAll('button');
-    for(let i = 0; i < buttons.length; i++) {
-        buttons[i].addEventListener('click', createParagraph);
-    }
+//     const buttons = document.querySelectorAll('button');
+//     for(let i = 0; i < buttons.length; i++) {
+//         buttons[i].addEventListener('click', createParagraph);
+//     }
 
-});
+// });
 
 class Person {
     name = '';
@@ -149,7 +149,7 @@ async function testFunc2(){
 } 
 
 const aaa2 = testFunc2();
-aaa2
+aaa2;
 
 const myFun = async () => {
   return new Promise((resolve, reject) => {
@@ -176,4 +176,37 @@ const myFun2 = async() => {
   
 }
 myFun2();
+
+const personName = document.querySelector('#name');
+const delay = document.querySelector('#delay');
+
+function setAlarm(name, delay){
+  return new Promise((resolve, reject) => {
+    if(delay<0){
+      throw new Error('delay 必须是正值');
+    }
+    window.setTimeout(() => {
+      resolve(`wakeup ${name}!`);
+    }, delay);
+  });
+}
+
+const output = document.querySelector('#output');
+const btn = document.querySelector('#set-alarm');
+btn.addEventListener('click', async () => {
+  // setAlarm(personName.value, delay.value)
+  // .then(txt => {
+  //   output.textContent = txt;
+  // })
+  // .catch(err => {
+  //   output.textContent = err;
+  // })
+  try{
+     const txt = await setAlarm(personName.value, delay.value);
+     output.textContent = txt;
+  }
+  catch(err){
+    output.textContent = err;
+  }
+});
 

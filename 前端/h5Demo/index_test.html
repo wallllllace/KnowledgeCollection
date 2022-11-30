@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Javascript</title>
-    <script src="home.js"></script>
-    <script>
+    <script defer src="home.js"></script>
+    <!-- <script>
         myName = 'Chris';
 
         function logName() {
@@ -40,12 +40,44 @@
         let str = 'dou wan yi shi da tou';
         console.log(str.split(' '));
 
-    </script>
+    </script> -->
 </head>
 <body>
     <button>点我！</button>
     <button class="change">change color</button>
-    <script>
+
+    <div>
+        <label for="name">name: </label>
+        <input type="text" name="name" id="name" value="wallace">
+    </div>
+    <div>
+        <label for="delay">delay: </label>
+        <input type="text" name="delay" id="delay" value="1000">
+    </div>
+    <button id="set-alarm">setAlarm</button>
+    <div id="output"></div>
+
+    <form action="/my-handling-form-page" method="post">
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" name="username" id="name">
+            </li>
+            <li>
+                <label for="mail">Email</label>
+                <input type="email" name="useremail" id="mail">
+            </li>
+            <li>
+                <label for="message">Message</label>
+                <textarea name="usermessage" id="message" cols="30" rows="10"></textarea>
+            </li>
+            <li>
+                <button type="submit">send</button>
+            </li>
+        </ul>
+    </form>
+
+    <!-- <script>
         let body = document.querySelector('body');
         let panel = document.createElement('div');
         panel.setAttribute('class','messageBox');
@@ -91,6 +123,6 @@
 
 
 
-    </script>
+    </script> -->
 </body>
 </html>
