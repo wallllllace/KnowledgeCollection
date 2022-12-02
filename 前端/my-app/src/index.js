@@ -84,6 +84,58 @@ class Clock extends React.Component{
   }
 }
 
+
+class MyButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {btnOn: false};
+    this.handle = this.handle.bind(this);
+  }
+
+  handle(id){
+    this.setState((prevState) => ({
+      btnOn: !prevState.btnOn
+    }), () => {
+      const p = document.createElement('p');
+      let text = !this.state.btnOn ? "开关已关闭" : "开关已开启";
+      p.textContent =  text + id;
+      document.body.appendChild(p);
+    });
+  }
+
+  render(){
+    return(
+      // <button onClick={this.handle.bind(this, "111")}>
+      //   {this.state.btnOn ? "关闭" : "开启"}
+      // </button>
+
+      <button onClick={(e) => this.handle("111", e)}>
+        {this.state.btnOn ? "关闭" : "开启"}
+      </button>
+    );
+  }
+}
+
+class List extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render(){
+    const list = this.props.list;
+    const listItems = list.map((item)=>
+      <li>这是第{item}行</li>
+    );
+    return (
+      <ul>
+        {list.map(item => {
+           return <li key={item.toString()}>这是第{item}行</li>
+          }
+        )}
+      </ul>
+    );
+  }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const element = <h1>你好，陌生人！</h1>
 const cmt = {
@@ -100,6 +152,8 @@ const element = (
     <p>大家好！dd</p>
     <Comment cmt={cmt}/>
     <Clock name="wallace"/>
+    <MyButton/>
+    <List list={[1,2,3,4,5]}/>
   </div>
 );
 root.render(
