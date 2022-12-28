@@ -198,6 +198,112 @@ class MyForm extends React.Component {
   }
 }
 
+const map = {
+  "c": "摄氏度",
+  "f": "华氏度"
+};
+
+function toCelsius(fahrenheit) {
+  return (fahrenheit - 32) * 5 / 9;
+}
+
+function toFahrenheit(celsius) {
+  return (celsius * 9 / 5) + 32;
+}
+
+function tryConvert(temperature, convert) {
+  const input = parseFloat(temperature);
+  if (Number.isNaN(input)) {
+    return '';
+  }
+  const output = convert(input);
+  const rounded = Math.round(output * 1000) / 1000;
+  return rounded.toString();
+}
+
+
+class TemperatureInput extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(e){
+    this.props.onChange(e.target.value);
+  }
+
+  render(){
+    let scale = this.props.scale;
+    let temperature = this.props.temperature;
+    return (
+      <fieldset>
+        <legend>Enter temperature in {map[scale]}:</legend>
+        <input type="text" value={temperature} 
+               onChange={this.handleChange} />
+      </fieldset>
+    );
+  }
+}
+
+class BoilingVerdict extends React.Component {
+  constructor(props){
+    super(props);
+  }
+
+  render() {
+    if (this.props.temperature >= 100) {
+      return <p>水沸腾了！</p>
+    }
+    return <p>水没有沸腾</p>
+  }
+}
+
+class Calculator extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.cOnChange = this.cOnChange.bind(this);
+    this.fOnChange = this.fOnChange.bind(this);
+
+    this.state = {
+      scale:"",
+      temperature:""
+    };
+  }
+
+  cOnChange(value){
+    this.setState({
+      scale: "c",
+      temperature: value
+    });
+  }
+
+  fOnChange(value){
+    this.setState({
+      scale: "f",
+      temperature: value
+    });
+  }
+
+  render() {
+    let cTemperature = this.state.temperature;
+    let fTemperature = this.state.temperature;
+    if (this.state.scale === "c") {
+      fTemperature = tryConvert(cTemperature, toFahrenheit);
+    } else {
+      cTemperature = tryConvert(fTemperature, toCelsius);
+    }
+    return (
+      <div>
+        <TemperatureInput scale="c" temperature={cTemperature} onChange={this.cOnChange} />
+        <TemperatureInput scale="f" temperature={fTemperature} onChange={this.fOnChange} />
+        <BoilingVerdict temperature={cTemperature}/>
+      </div>
+    );
+  }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const element = <h1>你好，陌生人！</h1>
 const cmt = {
@@ -217,6 +323,7 @@ const element = (
     <MyButton/>
     <List list={[1,2,3,4,5]}/>
     <MyForm/>
+    <Calculator/>
   </div>
 );
 root.render(
