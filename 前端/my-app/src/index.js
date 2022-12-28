@@ -136,6 +136,68 @@ class List extends React.Component {
   }
 }
 
+class MyForm extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.handleValueChange = this.handleValueChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleTextChange = this.handleTextChange.bind(this);
+    this.handleSelectChange = this.handleSelectChange.bind(this);
+
+    this.state = {
+      name:"",
+      placeholder:"请输入姓名",
+      text:"请撰写一篇关于你喜欢的 DOM 元素的文章.",
+      select:"pingguo"
+    };
+  }
+
+  handleValueChange(event) {
+    this.setState({name: event.target.value});
+  }
+  
+  handleTextChange(event) {
+    this.setState({text: event.target.value});
+  }
+
+  handleSelectChange(event) {
+    this.setState({select: event.target.value});
+  }
+
+  handleSubmit(event){
+    console.log("提交的名字" + this.state.name);
+    event.preventDefault();
+  }
+
+  render(){
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          名字：
+          <input type="text" value={this.state.name} placeholder={this.state.placeholder} onChange={this.handleValueChange}/>
+        </label>
+        <br/>
+        <label>
+          文章：
+          <textarea value={this.state.text} onChange={this.handleTextChange} />
+        </label>
+        <br/>
+        <label>
+          选择口味：
+          <select value={this.state.select} onChange={this.handleSelectChange}>
+            <option value="putao">葡萄</option>
+            <option value="pingguo">苹果</option>
+            <option value="li">梨</option>
+          </select>
+        </label>
+        <br/>
+        <input type="submit" value="提交"/>
+      </form>
+    );
+  }
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // const element = <h1>你好，陌生人！</h1>
 const cmt = {
@@ -154,6 +216,7 @@ const element = (
     <Clock name="wallace"/>
     <MyButton/>
     <List list={[1,2,3,4,5]}/>
+    <MyForm/>
   </div>
 );
 root.render(
