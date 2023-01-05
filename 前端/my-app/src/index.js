@@ -327,14 +327,14 @@ const element = (
   </div>
 );
 root.render(
-  // <React.StrictMode>
-  //   <App />
-  // </React.StrictMode>
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 //   <div>
 // <h1>Hello, world!</h1>
 //   <p>大家好！</p>
 //   </div>
-  element
+  // element
 );
 
 // If you want to start measuring performance in your app, pass a function
