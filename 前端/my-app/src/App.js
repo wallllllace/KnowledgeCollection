@@ -90,6 +90,7 @@ class ThemeBox extends React.Component {
         </TypeContext.Provider>
         <CustomTextInput />
         <AutoFocusTextInput />
+        <WelcomeDialog />
       </div>
     );
   }
@@ -160,6 +161,42 @@ class AutoFocusTextInput extends React.Component {
   render() {
     return (
       <CustomTextInput ref={this.textInput}/>
+    );
+  }
+}
+
+class FancyBorder extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <div>
+        <p>下面是left</p>
+        {this.props.left}
+        <p>下面是right</p>
+        {this.props.right}
+        <p>下面是children</p>
+        {this.props.children}
+      </div>
+    );
+  }
+}
+
+class WelcomeDialog extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  render() {
+    return (
+      <FancyBorder left={
+        <p>我是left</p>
+      } right={
+        <p>我是right</p>
+      }>
+        <h1>Welcome</h1>
+        <p>Thank you for visiting our spacecraft!</p>
+      </FancyBorder>
     );
   }
 }
