@@ -2,6 +2,8 @@ import { Button } from 'antd';
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const TypeContext = React.createContext({
     type: 'link',
@@ -91,6 +93,7 @@ class ThemeBox extends React.Component {
         <CustomTextInput />
         <AutoFocusTextInput />
         <WelcomeDialog />
+        <Clock />
       </div>
     );
   }
@@ -199,5 +202,22 @@ class WelcomeDialog extends React.Component {
       </FancyBorder>
     );
   }
+}
+
+function Clock() {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    document.title = `You click ${count} times`;
+  });
+
+  return (
+    <div>
+      <p>You click {count} times</p>
+      <button onClick={() => setCount(count+1)}>
+        Click me
+      </button>
+    </div>
+  );
 }
 
