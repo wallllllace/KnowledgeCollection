@@ -4,6 +4,7 @@ import './App.css';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { useContext } from 'react';
 
 const TypeContext = React.createContext({
     type: 'link',
@@ -46,22 +47,35 @@ function ToolBar(props){
   );
 }
 
-class  ThemedButton extends React.Component {
-  // static contextType = TypeContext;
+// class  ThemedButton extends React.Component {
+//   // static contextType = TypeContext; 
   
-  render() {
-    const {type,toggleBtn} = this.context;
-    return (
-      <div>
-        <Button type={type}>button1</Button>
-        <Button type={type}>button2</Button>
-        <Button type={type} onClick={toggleBtn}>button3</Button>
-      </div>
-    )
-  }
-}
+//   render() {
+//     // const {type,toggleBtn} = this.context;
+//     const {type,toggleBtn} = useContext(TypeContext);
+//     return (
+//       <div>
+//         <Button type={type}>button1</Button>
+//         <Button type={type}>button2</Button>
+//         <Button type={type} onClick={toggleBtn}>button3</Button>
+//       </div>
+//     )
+//   }
+// }
 
-ThemedButton.contextType = TypeContext;
+// ThemedButton.contextType = TypeContext;
+
+
+function  ThemedButton() {
+  const {type,toggleBtn} = useContext(TypeContext);
+  return (
+    <div>
+      <Button type={type}>button1</Button>
+      <Button type={type}>button2</Button>
+      <Button type={type} onClick={toggleBtn}>button3</Button>
+    </div>
+  );
+}
 
 class ThemeBox extends React.Component {
   constructor(props) {
