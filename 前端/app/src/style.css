@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Ahem';
+    src: url('./Ahem.woff') format('woff'), url('./ahem.woff2') format('woff2');
+    font-weight: 60;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    background: url('./background.png');
+    /* font-family: 'ahem'; */
+}
