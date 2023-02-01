@@ -1,42 +1,41 @@
-import { makeAutoObservable } from "mobx"
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { observer } from "mobx-react"
 import { TimerContext } from "./App";
+import { MobXProviderContext } from "mobx-react";
 
-export class Timer {
-    secondsPassed = 0;
+// function TimerBtn(props) {
+//     const TimerComponent = observer(props => {
+//         const {timer} = React.useContext(MobXProviderContext);
+//         useEffect(() => {
+//             console.log(`时间改变了${timer.secondsPassed}`);
+//         }, [timer.secondsPassed]);
+//         return (
+//             <button onClick={() => timer.reset()}>已过秒数：{timer.secondsPassed}</button>
+//         );
+//     });
+//     return <TimerComponent />
+// }
 
-    constructor() {
-        makeAutoObservable(this);
-    }
+const TimerBtn = observer(props => {
+    const {timer} = React.useContext(MobXProviderContext);
+    useEffect(() => {
+        console.log(`时间改变了${timer.secondsPassed}`);
+    }, [timer.secondsPassed]);
+    return (
+        <button onClick={() => timer.reset()}>已过秒数：{timer.secondsPassed}</button>
+    );
+});
 
-    increase() {
-        this.secondsPassed += 1;
-    }
+// export default function TimerView() {
+// // const TimerBtn = timerBtn();
+//            return  <TimerBtn />;
+        
+// }
 
-    reset() {
-        this.secondsPassed = 0;
-    }
-}
+ const TimerView = props => {
+    return <TimerBtn />
+ }
 
-class TimerView extends React.Component {
-
-    render(){
-        const TimerBtn = observer(() => {
-            const timer = useContext(TimerContext);
-            return (
-                <button onClick={() => timer.reset()}>已过秒数：{timer.secondsPassed}</button>
-            );
-        });
-        return (
-            <>
-            <TimerBtn />
-            </> 
-        );
-
-    }
-}
-
-export default TimerView;
+ export default TimerView;
 
 

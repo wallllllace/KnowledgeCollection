@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx"
 
-export default class Timer {
+class Timer {
     secondsPassed = 0;
 
     constructor() {
@@ -15,3 +15,10 @@ export default class Timer {
         this.secondsPassed = 0;
     }
 }
+
+const timer = new Timer();
+setInterval(() => {
+    timer.increase();
+}, 1000);
+
+export default timer;
