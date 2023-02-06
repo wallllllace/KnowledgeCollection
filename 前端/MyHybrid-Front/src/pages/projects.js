@@ -3,7 +3,7 @@ import React from "react";
 export default () => {
     return (
         <div>
-            <h1>Me</h1>
+            <h1>Projects</h1>
         </div>
     );
 };
