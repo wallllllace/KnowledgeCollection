@@ -8,6 +8,7 @@
     background: #2c2c2c;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 999;
   }
 
@@ -31,20 +32,20 @@
     }
   }
 
+  $bottomColor:#bD0101;
   .nav-active {
     color: #fff;
     >.header-text {
-      border-bottom: 3px solid #bD0101;
+      border-bottom: 3px solid $bottomColor;
       padding-bottom: 0;
     }
   }
 
   .header-text {
-    cursor: pointer;
   height: 30px;
   text-align: center;
-  display: flex;
-  align-items: center;
+//   display: flex;
+//   align-items: center;
   box-sizing: border-box;
   padding: 3px;
 }

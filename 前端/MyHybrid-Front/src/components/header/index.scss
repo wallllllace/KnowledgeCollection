@@ -1,0 +1,56 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #111010;
+    display: flex;
+    z-index: 999;
+    align-items: center;
+}
+
+.header-router-container {
+    display: flex;
+    color: white;
+    font-size: 16px;
+}
+
+.header-router-navlink {
+    cursor: pointer;
+    text-align: center;
+    margin: 15px 20px;
+    display: flex;
+}
+
+.nav-active {
+    > .header-text {
+        border-bottom: 3px solid rebeccapurple;
+    }
+}
+
+.header-text {
+    height: 30px;
+  text-align: center;
+//   display: flex;
+//   align-items: center;
+  box-sizing: border-box;
+  padding: 3px;
+}
+
+.header-logo {
+    width: 100px;
+    margin-left: 10px;
+    padding: 0 20px;
+}
+
+.header-notice-container {
+    color: white;
+    background-color: #404040;
+    display: flex;
+    width: 500px;
+    height: 35px;
+    align-self: center;
+    margin: 0 50px;
+}
