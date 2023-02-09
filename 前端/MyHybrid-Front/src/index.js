@@ -11,16 +11,6 @@ import Main from './main/index'
 ReactDOM.render(
     <Provider {...store}>
         <HashRouter>
-            {/* <nav>
-                <ul>
-                    <li><Link to="/home">Home</Link></li>
-                    <li><Link to="/projects">Projects</Link></li>
-                    <li><Link to="/dataCenter">DataCenter</Link></li>
-                    <li><Link to="/document">Document</Link></li>
-                    <li><Link to="/xconsole">Xconsole</Link></li>
-                    <li><Link to="/admin">Admin</Link></li>
-                </ul>
-            </nav> */}
             <Main />
         </HashRouter>
     </Provider>

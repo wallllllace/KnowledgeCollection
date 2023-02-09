@@ -1,0 +1,38 @@
+.header-content-container {
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+}
+
+.header-content-title-container {
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 80px;
+}
+
+.header-content-title-big-container {
+    font-size: 40px;
+}
+
+.header-content-body-container {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.header-content-create-container{
+    margin: 20px 0;
+    padding: 10px 0;
+    width: 100px;
+    height: 30px;
+    background-color: hsl(37, 100%, 50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.header-content-create-button {
+    display: flex;
+    font-size: 16px;
+    color: white;
+}
