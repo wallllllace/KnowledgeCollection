@@ -45,6 +45,14 @@
     padding: 0 20px;
 }
 
+.header-right-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+}
+
 .header-notice-container {
     color: white;
     background-color: #404040;
@@ -53,4 +61,31 @@
     height: 35px;
     align-self: center;
     margin: 0 50px;
+    border-radius: 5px;
+}
+
+.header-notice-container-SoundOutlined {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.header-appselector-container {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.header-userAccount-container {
+    display: flex;
+    margin: 0 20px;
+    padding: 0 10px;
+    color: white;
+}
+
+.header-userAccount-container-menu {
+    // display: flex;
+    // margin-right: 0;
+    
+    right: 0;
 }
