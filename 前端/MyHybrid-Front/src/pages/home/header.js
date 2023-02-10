@@ -8,6 +8,7 @@ const Header = () => {
     const Content = () => {
         return (
             <div className="header-content-container">
+                <div className="header-content-bgimg"></div>
                 <div className="header-content-title-container">
                     <span className="header-content-title-big-container">JDHybrid</span>
                     平台介绍
@@ -20,7 +21,13 @@ const Header = () => {
                         console.log('创建项目');
                     }}>立即创建</Button>
                 </div>
-                <div className="header-content-link-container">友情链接：</div>
+                <div className="header-content-link-container">
+                    <span>友情链接：</span>
+                    <span>pubfree</span>
+                    <span>ipaas</span>
+                    <span>xview2</span>
+                    <span>switchquery</span>
+                </div>
             </div>
         );
     };

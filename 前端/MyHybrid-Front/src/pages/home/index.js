@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
-import Header from "./header"
+import Header from "./header";
+import Advantage from "./advantage";
 
 export default () => {
     return (
@@ -9,7 +10,7 @@ export default () => {
                 <Header />
             </div>
             <div className="home-advantage-container">
-
+                <Advantage />
             </div>
             <div className="home-ability-container">
 

@@ -1,0 +1,46 @@
+.advantage-title-container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+
+    .advantage-title-container-ch {
+        font-size: 30px;
+        color: black;
+        font-weight: lighter;
+        padding-top: 20px;
+    }
+    .advantage-title-container-en {
+        font-size: 15px;
+        color: black;
+        font-weight: lighter;
+        padding-top: 10px;
+    }
+}
+
+.advantage-content-container {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    .advantage-content-item-container {
+        width: 500px;
+        text-align: center;
+        .advantage-content-item-container-img {
+            width: auto;
+            height: 70%;
+        }
+        .advantage-content-item-container-title {
+            font-size: 25px;
+            color: black;
+            font-weight: lighter;
+            margin: 10px 0;
+        }
+        .advantage-content-item-container-content {
+            margin: 20px 0;
+            font-size: 1wpx;
+            color: black;
+            font-weight: lighter;
+        }
+    }
+}

@@ -5,7 +5,13 @@
 
 .home-header-container{
     height: 500px;
-    background-color: aqua;
+    background: linear-gradient(to right, rgba(159,55,75), rgba(77,97,224));
+    overflow: hidden;
+}
+
+.home-advantage-container {
+    height: 500px;
+    background-color: white;
 }
 
 .home-ability-container{
