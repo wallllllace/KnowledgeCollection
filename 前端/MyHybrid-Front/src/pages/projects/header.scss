@@ -1,0 +1,27 @@
+.project-header-container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.project-header-title-container {
+    font-weight: bolder;
+    font-size: larger;
+    display: flex;
+}
+
+.project-header-search-container {
+    margin: 0 30px;
+    display: flex;
+    width: 800px;
+}
+
+.project-header-createBtn-container {
+    display: flex;
+    position: absolute;
+    right: 50px;
+    background-color: rgb(238, 0, 255);
+}
