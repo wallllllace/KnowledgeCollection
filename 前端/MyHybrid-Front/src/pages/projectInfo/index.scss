@@ -1,0 +1,64 @@
+.projectInfo-container {
+    margin: 0 auto;
+    width: 90%;
+    position: relative;
+}
+
+.projectInfo-breadcrumb-container {
+    padding-top: 20px;
+    font-size: large;
+}
+
+.projectInfo-breadcrumb-line {
+    clear: both;
+}
+
+.projectInfo-floatView-container {
+    position: fixed;
+    right: 100px;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectInfo-floatView-operate-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectInfo-floatView-qrcode-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(208, 206, 206);
+    width: 220px;
+}
+
+.projectInfo-floatView-operate-container-btn {
+    padding: 2px 30px;
+    margin: 5px auto;
+    font-size: medium;
+    color: white;
+    background: rgb(131, 2, 2);
+}
+
+.projectInfo-floatView-qrcode-container-title {
+    font-size: small;
+    font-weight: lighter;
+    margin: 10px auto;
+}
+
+.projectInfo-floatView-qrcode-container {
+    margin: 10px auto;
+}
+
+.projectInfo-floatView-qrcode-container-info {
+    margin: 20px auto;
+    font-size: smaller;
+    font-weight: lighter;
+}

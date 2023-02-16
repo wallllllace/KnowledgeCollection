@@ -5,6 +5,7 @@ import DataCenter from '../pages/dataCenter';
 import Document from '../pages/document';
 import Xconsole from '../pages/xconsole';
 import Admin from '../pages/admin';
+import ProjectInfo from '../pages/projectInfo';
 
 export const navs = [
     {
@@ -42,6 +43,12 @@ export const navs = [
         key: "admin",
         path: "/admin",
         component: Admin
+    },
+    {
+        name: "详情页",
+        key: "projectInfo",
+        path: "/info",
+        component: ProjectInfo
     }
 ];
 

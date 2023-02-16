@@ -4,9 +4,11 @@ import { Table, Button, message, Switch } from "antd";
 import { CopyOutlined } from "@ant-design/icons";
 import { MobXProviderContext } from "mobx-react";
 import "./projectTable.scss";
+import { useHistory } from "react-router-dom";
 
 const ProjectTable = () => {
     const {projects} = React.useContext(MobXProviderContext);
+    const history = useHistory();
 
     const operateFunc = (opeIdx, rowIndex) => {
         const data = projects.list[rowIndex];
@@ -17,6 +19,7 @@ const ProjectTable = () => {
             break;
             case 1: {
                 console.log(`配置操作：${data.projectName}`);
+                history.push("/info");
             }
             break;
             case 2: {
