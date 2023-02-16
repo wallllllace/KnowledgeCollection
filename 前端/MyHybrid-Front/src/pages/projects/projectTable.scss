@@ -1,0 +1,44 @@
+.projectTitle-idAera-container {
+    display: flex;
+    align-items: center;
+}
+
+.projectTitle-idAera-id {
+
+}
+
+.projectTitle-idAera-copyicon {
+    margin: 0 5px;
+}
+
+.projectStatus-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projectStatus-container-item {
+    display: flex;
+    padding: 1px 5px;
+    font: medium 14px Arial, sans-serif;
+    background-color: rgb(203, 203, 203);
+    border: 1px solid green;
+    color: green;
+}
+
+.project-operate-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-operate-container-item {
+    display: flex;
+    margin: 0 5px;
+    padding: 1px 3px;
+    // background: rgb(238, 212, 212);
+    font: medium 20px Arial, sans-serif;
+    color: red;
+    // border: 1px solid red;
+    cursor: pointer;
+}

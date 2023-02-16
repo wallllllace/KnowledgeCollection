@@ -1,137 +1,60 @@
 import React from "react";
-import { Table } from "antd";
+import { Table, Button } from "antd";
 import "./index.scss";
 import Header from "./header";
+import { CopyOutlined } from "@ant-design/icons";
+import { Provider } from 'mobx-react';
+import projects from "../../stores/projectInfo";
+import { MobXProviderContext } from "mobx-react";
+import ProjectTable from "./projectTable";
+import { ProjectRow, Gray } from "../../stores/projectInfo";
 
 export default () => {
 
-    const ProjectTitle = ({projectName, projectId}) => (
-        <>
-            <div>{projectName}</div>
-            <div>{projectId}</div>
-        </>
-    );
+    const row1 = new ProjectRow("2023-x-正式", 
+                                "819549326722809856", 
+                                {apple: "30%", android: "50%"}, 
+                                {apple: "30%", android: "50%"},
+                                "wangxiaorui19",
+                                "进行中",
+                                ["编辑","配置","查看","权限管理"]);
+    const row2 = new ProjectRow("百亿补贴正式链接", 
+                                "830863600109662208", 
+                                {apple: "--", android: "50%"}, 
+                                {apple: "30%", android: "--"},
+                                "wangxiaorui19",
+                                "进行中",
+                                ["编辑","配置","查看","权限管理"]);
+    const row3 = new ProjectRow("探馆定位UA", 
+                                "809441262608756736", 
+                                {apple: "30%", android: "50%"}, 
+                                {apple: "--", android: "--"},
+                                "wangxiaorui19",
+                                "进行中",
+                                ["编辑","配置","查看","权限管理"]);
+    const row4 = new ProjectRow("首页调用-试用", 
+                                "827140937247797248", 
+                                {apple: "30%", android: "50%"}, 
+                                {apple: "30%", android: "50%"},
+                                "wangxiaorui19",
+                                "进行中",
+                                ["编辑","配置","查看","权限管理"]);
+    projects.addProject(row1);
+    projects.addProject(row2);
+    projects.addProject(row3);
+    projects.addProject(row4);
 
-    const Gray = ({apple, android}) => (
-        <>
-            <div>{apple}</div>
-            <div>{android}</div>
-        </>
-    );
-
-
-    const columns = [
-        {
-            title: "项目名称/HybridId",
-            dataIndex: "project",
-            key:"project",
-            render: (_, record) => {
-                return < ProjectTitle {...record} />;
-            }
-        },
-        {
-            title: "离线包灰度比",
-            dataIndex: "offRes",
-            key:"offRes",
-            align: "center",
-            render: (text) => {
-                return <Gray {...text} />;
-            }
-        },
-        {
-            title: "接口预加载灰度比",
-            dataIndex: "preloadData",
-            key:"preloadData",
-            align: "center",
-            render: (text) => {
-                return <Gray {...text} />;
-            }
-        },
-        {
-            title: "创建人 / 修改人 / 修改时间",
-            dataIndex: "creater",
-            key:"creater",
-            align: "center",
-            render: (text) => {
-                return (
-                    <>
-                    <div>{text}</div>
-                    </>
-                );
-            }
-        },
-        {
-            title: "项目状态",
-            dataIndex: "status",
-            key:"status",
-            align: "center",
-            render: (text) => {
-                return (
-                    <>
-                    <div>{text}</div>
-                    </>
-                );
-            }
-        },
-        {
-            title: "",
-            dataIndex: "operate",
-            key:"operate",
-            align: "center",
-            render: (_, {operate}) => {
-                return (
-                    <div>
-                    {operate.map((op) => (
-                        <span>{op}</span>
-                    ))}
-                    </div>
-                );
-            }
-        }
-    ];
-    const datas = [
-        {
-            
-            projectName: "百亿补贴频道页-预发",
-            projectId: "826785123125510144",
-            offRes: {
-                apple: "50%",
-                android: "30%"
-            },
-            preloadData: {
-                apple: "5%",
-                android: "3%"
-            },
-            creater: "wangxiaorui19",
-            status: "进行中",
-            operate: ["编辑", "配置", "下线", "权限管理"],
-        },
-        {
-            
-            projectName: "通天塔新",
-            projectId: "749650717872455680",
-            offRes: {
-                apple: "100%",
-                android: "90%"
-            },
-            preloadData: {
-                apple: "15%",
-                android: "30%"
-            },
-            creater: "mabaoyan",
-            status: "待发布",
-            operate: ["编辑", "配置", "下线", "权限管理"],
-        }
-    ];
+    
     return (
         <div className="project-container">
             <div>
                 <Header />
             </div>
             <div>
-                <Table columns={columns} dataSource={datas} />
+            <Provider projects={projects}>
+                <ProjectTable />
+            </Provider>
             </div>
-            
         </div>
     );
 };
