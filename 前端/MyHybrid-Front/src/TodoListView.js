@@ -58,7 +58,9 @@ class TodoListView extends React.Component {
 
         const store = new TodoList([new Todo("Get Coffee"), new Todo("running"), new Todo("eat breakfirst")]);
         return (
+            <>
             <TodoListView todoList={store}/>
+            </>
         );
     }
 }

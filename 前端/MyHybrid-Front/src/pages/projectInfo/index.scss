@@ -62,3 +62,30 @@
     font-size: smaller;
     font-weight: lighter;
 }
+
+.PrejectInfoTitleView-container-titleArea {
+ margin: 15px 0;
+}
+
+.PrejectInfoTitleView-container-titleArea-title {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 500;
+}
+.PrejectInfoTitleView-container-titleArea-projectId {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0 20px;
+}
+.PrejectInfoTitleView-container-titleArea-type {
+    padding: 0 10px;
+    background-color: brown;
+    border-radius: 5px;
+    color: white;
+}
+
+.PrejectInfoTitleView-container-specArea {
+    // margin: 30px 0;
+    font-weight: normal;
+}
